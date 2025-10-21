@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class ZoneManager : MonoBehaviour
 {
     [Header("UI Reference")]
-    public Text zoneText; // Reference to your UI Text element
+    public GameUIManager gameUIManager; // Reference to the GameUIManager
     
     [Header("Zone Settings")]
     public float fullEntryThreshold = 0.8f; // How much of the ball must be in the zone (0-1)
@@ -136,15 +135,16 @@ public class ZoneManager : MonoBehaviour
     
     private void UpdateZoneDisplay()
     {
-        if (zoneText != null)
+        if (gameUIManager != null)
         {
+            gameUIManager.UpdateZoneText(currentZone);
             if (!string.IsNullOrEmpty(currentZone))
             {
-                zoneText.text = "Current Zone: " + currentZone;
+                Debug.Log("Player is in zone: " + currentZone);
             }
             else
             {
-                zoneText.text = "No Zone";
+                Debug.Log("Player is not in any zone (null)");
             }
         }
     }

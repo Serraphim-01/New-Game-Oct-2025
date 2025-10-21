@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="gameui" style="flex-grow: 1; flex-direction: row; justify-content: space-between; align-items: center; padding: 20px;">
+        <engine:VisualElement name="leftPanel" style="flex-direction: column; justify-content: center; align-items: flex-start; width: 200px;">
+            <engine:Button text="Mission" name="missionButton" style="width: 150px; height: 40px; background-color: rgb(76, 175, 80); color: white; border-radius: 5px; font-size: 16px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="topPanel" style="flex-grow: 1; justify-content: center; align-items: center; top: 0; right: 0; position: absolute; width: 1925px;">
+            <engine:Label text="No Zone" name="zoneText" style="font-size: 18px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 10px; border-radius: 5px; top: 20px; right: 20px; position: absolute;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="rightPanel" style="width: 200px;" />
+    </engine:VisualElement>
+</engine:UXML>
